@@ -2,6 +2,7 @@ import { calculation } from "@/app/calculateFunction/calculation";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosStar } from "react-icons/io";
+import CommonButton from "../buttons/commonButton";
 
 const Card = ({ product }) => {
   // start rating function
@@ -42,9 +43,7 @@ const Card = ({ product }) => {
           </div>
         </div>
         <div className="flex items-center justify-between mb-2">
-          <button className="bg-orange-500 py-2 mt-3 px-3 text-white rounded">
-            Add to cart
-          </button>
+          <CommonButton children={"Add to cart"}/>
           <div className="flex items-center text-yellow-500">
             <p className="text-gray-400">({product.rating})</p> {starArray}
           </div>

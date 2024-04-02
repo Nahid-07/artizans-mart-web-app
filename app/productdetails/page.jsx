@@ -2,6 +2,7 @@ import React from "react";
 import getProductDetails from "../lib/getProductDetails";
 import Image from "next/image";
 import { IoIosStar } from "react-icons/io";
+import CommonButton from "../component/buttons/commonButton";
 
 const ProductDetails = async ({ searchParams }) => {
   const idString = searchParams.product_id;
@@ -36,9 +37,7 @@ const ProductDetails = async ({ searchParams }) => {
             <p className="text-lg text-gray-400">{product.category}</p>
           </div>
           <div className="flex justify-between items-center">
-            <button className="bg-orange-500 px-4 py-2 rounded-lg text-white">
-              Buy Now
-            </button>
+            <CommonButton children={'Buy now'}/>
             <div className="flex items-center text-yellow-500">
               <p className="text-gray-400">({product.rating})</p> {starArray}
             </div>
